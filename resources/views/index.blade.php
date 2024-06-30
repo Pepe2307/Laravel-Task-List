@@ -2,26 +2,21 @@
     The list of tasks
 </h1>
 
-
-@isset ($name)
-    My name is {{$name}}
-@endisset
-
 <div>
-    <h2>Con if y foreach</h2>
+{{--     <h2>Con if y foreach</h2>
 
     @if(count($tasks))
-        {{-- <div>there are tasks</div> --}}
+        
         @foreach ($tasks as $task)
             <div>
-                <a href="{{ route('task.show', ['id' => $task->id]) }}">
+                <a href="{{ route('task.show', ['task' => $task->id]) }}">
                     {{ $task->title }}
                 </a>
             </div>
         @endforeach
     @else
         <div>no tasks</div>
-    @endif
+    @endif --}}
 
     {{--  --}}
     <h2>Con FORELSE</h2>
@@ -33,7 +28,7 @@
                 {{ $task->title }}
             </a> --}}
 
-            <a href="{{ route('task.show', ['id' => $task->id]) }}">
+            <a href="{{ route('task.show', ['task' => $task->id]) }}">
                 {{ $task->title }}
             </a>
         </div>

@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11 Tasks Lists</title>
+    @yield('styles')
 </head>
 <body>
     <h1>Laravel 11 Tasks Lists Project - Peperino</h1>
     <h1>@yield('title')</h1>
-    <div>@yield('content')</div>
+    <div>
+        @if (session()->has('success'))
+            <div>{{ session('success') }}</div>
+        @endif
+
+        @yield('content')
+    </div>
 </body>
 </html>
