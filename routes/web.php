@@ -9,22 +9,23 @@ use Illuminate\Support\Facades\Route;
 // TODO: MAIN ROUTE    ******************
 Route::get('/tasks', function () {
     return view('index',[
-        'tasks'=>Task::latest()/* ->where('completed', true) */->get()
+        'tasks'=>Task::latest()->paginate()
     ]);
-})->name('task.index');
+})->name('tasks.index');
 // TODO: MAIN ROUTE    ******************
 
 
 
 
 // ? ROUTES BY ID      ******************
-Route::view('/tasks/create', 'create');
+Route::view('/tasks/create', 'create')
+    ->name('tasks.create');
 
 Route::get('/tasks/{task}/edit', function (Task $task) {
     return view('edit', [
         'task' => $task
     ]);
-})->name('task.edit');
+})->name('tasks.edit');
 
 Route::get('/tasks/{task}', function (Task $task) {
     return view('show', [
@@ -47,6 +48,24 @@ Route::put('/tasks/{task}', function (Task $task, TaskRequest $request) {
     -> with('success', 'Task UPDATED successfully');
 
 })->name('task.update');
+
+
+
+Route::delete('/tasks/{task}', function (Task $task) {
+    $task->delete();
+
+    return redirect()->route('tasks.index')
+        ->with('success', 'Task deleted successfully!');
+})->name('tasks.destroy');
+
+
+Route::put('tasks/{task}/toggle-complete', function (Task $task) {
+    $task->toggleComplete();
+
+    return redirect()->back()->with('succes', 'Task updated successfully');
+})-> name('tasks.toggle-complete');
+
+
 // ? ROUTES BY ID      ******************
 
 
@@ -55,7 +74,6 @@ Route::fallback(function () {
     return '404 custom error page';
 });
 Route::get('/', function () {
-    return redirect ()->route('task.index');
-    /* return redirect ('/hello'); */
+    return redirect ()->route('tasks.index');
 });
 //! FALLBACK Y REDIRECT ******************
