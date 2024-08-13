@@ -12,9 +12,6 @@ Route::get('/tasks', function () {
         'tasks'=>Task::latest()->paginate()
     ]);
 })->name('tasks.index');
-// TODO: MAIN ROUTE    ******************
-
-
 
 
 // ? ROUTES BY ID      ******************
@@ -66,9 +63,6 @@ Route::put('tasks/{task}/toggle-complete', function (Task $task) {
 })-> name('tasks.toggle-complete');
 
 
-// ? ROUTES BY ID      ******************
-
-
 //! FALLBACK Y REDIRECT ******************
 Route::fallback(function () {
     return '404 custom error page';
@@ -76,4 +70,3 @@ Route::fallback(function () {
 Route::get('/', function () {
     return redirect ()->route('tasks.index');
 });
-//! FALLBACK Y REDIRECT ******************

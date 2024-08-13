@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Laravel 11 Tasks Lists</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/logo_solo_sin_fondo.png') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
-
 
     {{-- blade-formatter-disable --}}
     <style type="text/tailwindcss">
@@ -31,7 +31,7 @@
             @apply text-red-500 text-sm
         }
         body{
-            @apply bg-slate-200 /* bg-green-100 */
+            @apply bg-slate-200
         }
     </style>
     {{-- blade-formatter-enable --}}

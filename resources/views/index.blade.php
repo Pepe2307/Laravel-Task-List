@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-
-
 @section('content')
 
     @if (session()->has('success'))
@@ -16,17 +14,12 @@
 
     @forelse ($tasks as $task )
         <div>
-            {{-- <a href="{{ route('task.show', ['task' => $task->id]) }}" 
-                @class([ 'font-bold', 'line-through'=> $task->completed])>
-                {{ $task->title }}
-            </a> --}}
-
             <a href="{{ route('task.show', ['task' => $task->id]) }}"
                 @class(['line-through' => $task->completed])>{{ $task->title }}
             </a>
         </div>
     @empty
-        <div>no tasks</div>
+        <div>No Tasks</div>
     @endforelse
 
     @if ($tasks->count())

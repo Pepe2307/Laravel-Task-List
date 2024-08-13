@@ -6,13 +6,11 @@
         <a href="{{ route('tasks.index') }}" class="btn">← Go back to the task list!</a>
     </div>
 
-
     <h1 class="mb-4 text-slate-700">Task Title: {{ $task->title }}</h1>
     <p class="mb-4 text-slate-700">Task Description: {{ $task->description }}</p>
     @if($task->long_description)
         <p class="mb-4 text-slate-700">Task Long Description:{{ $task->long_description }}</p>
     @endif
-
 
     <p class="text-sm text-slate-500">Task ID: {{$task->id}}</p>
     <p class="mb-4 text-sm text-slate-500">
@@ -33,7 +31,6 @@
             Edit
         </a>
     
-    
         <form method="POST" action="{{ route('tasks.toggle-complete', ['task' => $task]) }}">
         @csrf
         @method('PUT')
@@ -41,9 +38,6 @@
             Mark as {{ $task->completed ? 'not completed' : 'completed' }}
         </button>
         </form>
-    
-
-
     
         <form action="{{ route('tasks.destroy', ['task' => $task]) }}" method="POST">
             @csrf
