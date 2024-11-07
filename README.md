@@ -28,14 +28,11 @@
 
 ### Tecnologias utilizadas: / Technologies used:
 
-PHP - LARAVEL / SQL - DOCKER DESKTOP
+PHP - LARAVEL - TAILWIND/ SQL - DOCKER DESKTOP
 
 Tambien se usaron conocimientos en: / Furthermore, expertise in this technologies was utilized: 
 
     -TAILWIND
-    -JAVASCRIPT
-    -GIT KRAKEN
-    -VERCEL HOSTING
     -BLADE TEMPLATES
     -SEEDING A DATABASE
     -USER SESIONS
