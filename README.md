@@ -1,4 +1,4 @@
-# Pablo Paez 💻 LARAVEL - TASK LIST
+# Pablo Paez 🦝 - LARAVEL - TASK LIST 💻
 
 
 
@@ -11,7 +11,7 @@
   </a>
 </div>
 
-# El proyecto😎
+# El Proyecto⭐ / The Project🌟
 
 <div align="center">
 
@@ -22,14 +22,15 @@
   </a>
 </div>
 
-El proyecto es parte del portfolio de proyectos de LARAVEL, en esto caso una aplicacion de Tast Lists donde se llevara un registro de las actividades por hacer, las ya hechas, y creacion y eliminacion de las mismas
+⭐ El proyecto es parte del portfolio de proyectos de LARAVEL, en esto caso una aplicacion de Tast Lists donde se llevara un registro de las actividades por hacer, las ya hechas, y creacion y eliminacion de las mismas
+<br/>
+🌟 This project is part of the LARAVEL project portfolio, specifically a To-Do List application that will keep track of tasks to be completed, completed tasks, and allow for their creation and deletion
 
-### Tecnologias utilizadas:
+### Tecnologias utilizadas: / Technologies used:
 
-Este proyecto utiliza como herramienta principal: 
 PHP - LARAVEL / SQL - DOCKER DESKTOP
 
-Ademas de LARAVEL, se utilizaron conocimientos en:
+Tambien se usaron conocimientos en: / Furthermore, expertise in this technologies was utilized: 
 
     -TAILWIND
     -JAVASCRIPT
@@ -39,11 +40,15 @@ Ademas de LARAVEL, se utilizaron conocimientos en:
     -SEEDING A DATABASE
     -USER SESIONS
     -PAGINATION
+    -DATABASE INTERACTIONS WITH ELOQUENT ORM
+    -CRUD OPERATIONS
+    -FORM VALIDATING
+    -SESSION HANDLING
 
 
 
 <!-- LINKS -->
-### Contacto📩
+### Contacto📩 / Contact📩
 
 Pablo Paez - Desarrollador Web - pablopaez2307@gmail.com
 
